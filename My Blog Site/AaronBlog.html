@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BlogSpot</title>
+</head>
+<style>
+	td {
+		padding: 10px;
+	}
+	input[type="text"] {
+		width: 500px;
+		height: 30px;
+	}
+	textarea {
+		max-height: 200px;
+		max-width: 500px;
+		min-height: 200px;
+		min-width: 500px;
+	}
+	.input_Blog {
+		width: 680px;
+		background-color: #C0A172;
+		float: right;
+		margin-right: 220px;
+		border-radius: 10px;
+	}
+	.blog_Result {
+		height: auto;
+		width: 227px;
+		background-color: #FCF141;
+		border-radius: 5px;
+		margin-left: 60px;
+		margin-top: 84px;
+		-webkit-transition: 10s;
+    	transition: 10s;
+		-ms-transform: rotate(-11deg);
+    	-webkit-transform: rotate(-11deg);
+    	transform: rotate(-11deg);
+	}
+	article {
+		padding: 10px;
+	}
+	.header {
+		text-align: right; 
+		margin-right: 355px;
+		color: #7B4A12;
+	}
+	body {
+		background: url("blog_background_by_justiej.jpg");
+		background-attachment: fixed;
+	}
+	#content {
+		 text-overflow: clip;
+		 max-width: 200px;
+	}
+</style>
+<body>
+<h1 class = "header">Create your own blog here</h1>
+<div class = "input_Blog">
+	<table>
+		<tr>
+			<td>Title of the Blog</td>
+			<td><input type="text" id = "title"></td>
+		</tr>
+		<tr>
+			<td>First Name:</td>
+			<td><input type="text" id = "f_name"></td>
+		</tr>
+		<tr>
+			<td>Middle Name:</td>
+			<td><input type="text" id = "m_name"></td>
+		</tr>
+		<tr>
+			<td>Last Name:</td>
+			<td><input type="text" id = "l_name"></td>
+		</tr>
+		<tr>
+			<td>Blog Content:</td>
+			<td>
+				<textarea id = "blog_content">
+					
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type = "button" value="Submit" onclick="post_blog()"/>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="blog_Result">
+	<article>
+		<h1 id = "blog_title"></h1>
+		<h3 id = "author"></h3>
+		<i><p id = "date_today"></p></i>
+		<p id = "content" maxlength = "30"></p>
+	</article>
+</div>
+<script>
+
+	function post_blog() {
+		alert("Blog has been Stablished!");
+		var title_blog = document.getElementById('title').value;
+		var f_name = document.getElementById('f_name').value;
+		var m_name = document.getElementById('m_name').value;
+		var l_name = document.getElementById('l_name').value;
+		var text_content = document.getElementById('blog_content').value;
+		var date = new Date();
+
+		document.getElementById('blog_title').innerHTML = title_blog;
+		document.getElementById('author').innerHTML = f_name + " " + m_name + " " + l_name;
+		document.getElementById('date_today').innerHTML = date;
+		document.getElementById('content').innerHTML = text_content;
+	}
+</script>
+</body>
+</html>

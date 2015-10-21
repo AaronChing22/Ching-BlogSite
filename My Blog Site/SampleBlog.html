@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Exercise</title>
+	<style type="text/css"> {
+		font-family: sans-serif;
+	}
+	section {
+		width: 100%;
+	}
+	article {
+		background-color: #eee;
+		padding: 10px;
+		margin: 5px;
+	}
+	.published {
+		background-color: gold;
+	}
+	form div {
+		padding: 5px;
+	}
+	input {
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<head>LVCC Blog</head>
+	<section>
+		<article>
+			<form>
+				<div>
+					<div>
+						<label>Title</label>
+					</div>
+					<div>
+						<input type='text' name='title' id = 'input_title' size="70">
+					</div>
+				</div>
+				<div>
+					<div>
+						<label>Author</label>
+					</div>
+					<div>
+						<input type='text' name='author' id='input_author' size="70">
+					</div>
+				</div>
+				<div>
+					<div>
+						<label>Content</label>
+					</div>
+					<div>
+						<textarea name='content' id='input_content' rows='10' cols='100%'></textarea>
+					</div>
+					<div>
+						<input type='button' value='Submit' onclick="postBlog()"/>
+					</div>
+			</form>
+		</article>
+		<article class='published'>
+			<h1 id='title'></h1>
+			<h6 id='author'></h6>
+			<p id='content'></p>
+		</article>		
+</section>
+<footer>All right reserved &copy; 2015</footer>
+
+<script type="text/javascript">
+	 var input_title = document.getElementById('input_title').value;
+     var input_firstname= document.getElementById('input_firstname').value;
+     var input_middlename= document.getElementById('input_middlename').value;
+     var input_lastname= document.getElementById('input_lastname').value;
+     var input_content=document.getElementById('input_content').value;
+
+     document.getElementById('title').innerHTML=input_title;
+     document.getElementById('author').innerHTML=input_firstname + '' + input_middlename + '' + input_lastname + " ";
+     document.getElementById('content').innerHTML=input_content;
+</script>
+</body>
+</html>
